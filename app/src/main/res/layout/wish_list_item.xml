@@ -6,11 +6,12 @@
     app:cardCornerRadius="@dimen/card_radius"
     app:cardElevation="@dimen/card_elevation">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/c_layout"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/background"
-        android:layout_height="wrap_content">
+        app:layoutDescription="@xml/wish_list_item_xml_c_layout_scene">
 
         <ImageView
             android:id="@+id/wish_icon"
@@ -18,6 +19,8 @@
             android:layout_height="@dimen/wish_list_icon_height"
             android:layout_margin="@dimen/small_margin"
             android:scaleType="centerCrop"
+            android:contentDescription="@string/icon"
+            android:src="@mipmap/ic_launcher"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -26,14 +29,15 @@
             android:id="@+id/wish_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/text_start_margin"
+            android:layout_margin="8dp"
             android:shadowRadius="2"
+            android:text="@string/test_text"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/wish_icon"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 
 </androidx.cardview.widget.CardView>
